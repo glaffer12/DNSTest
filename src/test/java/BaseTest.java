@@ -39,12 +39,5 @@ public class BaseTest {
     public static void tearDown() {
         driver.quit();
     }
-    protected void fillField(By locator, String value) {
-        driver.findElement(locator).clear();
-        driver.findElement(locator).sendKeys(value);
-    }
 
-    protected void checkFillField(String value, By locator) {
-        Assert.assertEquals(value, driver.findElement(locator).getAttribute("value"));
-    }
     }

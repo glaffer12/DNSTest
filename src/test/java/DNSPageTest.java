@@ -15,7 +15,7 @@ public class DNSPageTest extends BaseTest {
         search.SearchByName("playstation 4");
 
         SearchResult sr = new SearchResult(driver);
-        sr.chooseTheProduct("//*[@id=\"search-results\"]/div[1]/div[1]/div[1]/div/div[1]/div/div[1]/div[1]/div/div[2]/div[1]/a");
+        sr.chooseTheProduct("//a[text()=\"Игровая приставка PlayStation 4 Slim Black 1 TB + 3 игры\"][1]");
         ProductCard Card = new ProductCard(driver);
         Product PlayStation = new Product();
         PlayStation.Price = Card.GetThePrice();
